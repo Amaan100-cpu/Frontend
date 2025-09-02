@@ -1,0 +1,128 @@
+/* Add these variables if not already in your global CSS */
+:root {
+  --primary: #1a1a1a;
+  --primary-dark: #0d0d0d;
+  --light: #f8fafc;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --rounded-lg: 1rem;
+  --rounded-full: 9999px;
+}
+
+.hero-banner {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 1rem;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 4rem;
+  margin:20px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Higher than image */
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: white; /* Explicit color */
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: white; /* Explicit color */
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  color: #1a1a1a;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  background-color: white;
+  font-size: 16px;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.hero-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  z-index: 2; /* Lower than content */
+}
+
+.hero-image:hover{
+  transform: scale(1.2);
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero-banner {
+    height: 350px;
+    padding: 0 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 300px;
+    padding: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+  
+  .hero-image {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 250px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
