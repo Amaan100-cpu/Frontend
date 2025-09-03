@@ -16,6 +16,7 @@ const Navbar = () => {
   const {user,setUser,setRed,cartData,authOpen,setAuthOpen,allUsers} =useContext(Mycontext)
   const location=useLocation()
   const toastShown = useRef(false);
+  console.log(allUsers,user?.data?.name)
   
   const toggle = () => {
     setOpen(!open)
@@ -63,7 +64,7 @@ const Navbar = () => {
               Array.isArray(allUsers) && allUsers.length == 0 && <NavLink onClick={()=>{setOpen(false);setAuthOpen(false)}} to={"/resetPassword"}><h4 className={"/about"==location.pathname?"actives":""}>Reset Password</h4></NavLink>
               }
               {
-              Array.isArray(allUsers) && allUsers.length > 0 &&<NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/dashboard"}><h4 className={"/cart"==location.pathname?"actives":""}>Dashboard{cartData.length>0&&<span className="cartQuantity">{cartData.length}</span>}</h4></NavLink>
+              Array.isArray(allUsers) && allUsers.length > 0 &&<NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/dashboard"}><h4 className={"/cart"==location.pathname?"actives":""}>Dashboard</h4></NavLink>
               }
               <Logout value={setOpen}/>
               </div>
