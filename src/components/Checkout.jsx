@@ -1,7 +1,7 @@
 // checkout.jsx
 import React, { useContext, useEffect, useState } from 'react';
 import Mycontext from '../Mycontext.jsx';
-import './checkout.css';
+import './Checkout.css';
 import {toast} from "react-toastify"
 import { toastError, toastSuccess } from '../Utils.jsx';
 import { useNavigate } from 'react-router-dom';
