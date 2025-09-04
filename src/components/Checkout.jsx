@@ -39,6 +39,7 @@ const handlePlaceOrder = async () => {
       console.log(order);
 
       if (!order.success && !toast.isActive("alreadyShow")) {
+          console.log(order.perr)
         return toastError(order.message, { toastId: "alreadyShow" });
       }
 

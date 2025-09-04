@@ -16,7 +16,7 @@ const Navbar = () => {
   const {user,setUser,setRed,cartData,authOpen,setAuthOpen,allUsers} =useContext(Mycontext)
   const location=useLocation()
   const toastShown = useRef(false);
-  console.log(allUsers,user?.data?.name)
+  
   
   const toggle = () => {
     setOpen(!open)

@@ -17,7 +17,11 @@ const logout=async()=>{
     fetchUser()
     if(!toast.isActive("logout")){
         toastSuccess("logout successfully",{toastId:"logout"})
+<<<<<<< HEAD
         window.location.replace("/")
+=======
+        window.location.replace("/");
+>>>>>>> 7627c7d25d2af7fc6c64b6fe6978715920ab5e29
       }
 
     }
