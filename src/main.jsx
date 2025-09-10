@@ -30,7 +30,7 @@ import AdminOrders from './components/AdminOrders.jsx'
 import AdminLogin from './components/AdminLogin.jsx'
 import WrongRoute from './components/WrongRout.jsx'
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+   <StrictMode>
     <BrowserRouter>
       <ContextProvider>
         <Navbar/>
@@ -59,5 +59,5 @@ createRoot(document.getElementById('root')).render(
         <ToastContainer/>
       </ContextProvider>
     </BrowserRouter>
-  // {/* </StrictMode> */}
+    </StrictMode> 
 )

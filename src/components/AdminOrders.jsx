@@ -65,7 +65,7 @@ catch(err){
             {
               order.orderDetails.map((obj)=>{
                 return<div className='order-card2'>
-                  <p className='cartImgContainer'><img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`} /></p>
+                  <p className='cartImgContainer'><img src={`${obj?.img}`} /></p>
                   <div>
                   <p><strong>{obj.productName}</strong></p>
                   <p style={{display:"flex",gap:"20px",flexWrap:"wrap"}}><spam>Price : {obj.price}</spam> <spam>Quantity : {obj.productQuantity}</spam> <spam>Size : {obj.size}</spam></p>
@@ -115,7 +115,7 @@ catch(err){
             {
               order.orderDetails.map((obj)=>{
                 return<div className='order-card2'>
-                  <p className='cartImgContainer'><img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`} /></p>
+                  <p className='cartImgContainer'><img src={`${obj?.img}`} /></p>
                   <div>
                   <p><strong>{obj.productName}</strong></p>
                   <p style={{display:"flex",gap:"20px",flexWrap:"wrap"}}><spam>Price : {obj.price}</spam> <spam>Quantity : {obj.productQuantity}</spam> <spam>Size : {obj.size}</spam></p>

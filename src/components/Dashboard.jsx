@@ -125,7 +125,7 @@ catch(err){
                 console.log(obj.img)
                 console.log(obj.price)
                 return<div className='order-card2' key={i}>
-                  <p className='cartImgContainer'><img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`} /></p>
+                  <p className='cartImgContainer'><img src={`${obj?.img}`} /></p>
                   <div>
                   <p><strong>{obj.productName}</strong></p>
                   <p style={{display:"flex",gap:"20px",flexWrap:"wrap"}}><span>Price : {obj.price}</span> <span>Quantity : {obj.productQuantity}</span> <span>Size : {obj.size}</span></p>

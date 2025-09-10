@@ -150,6 +150,11 @@
     cursor: pointer;
 }
 
+.orders-table>tbody>tr>td{
+  width: fit-content;
+  white-space: nowrap;
+}
+
 @media (max-width: 798px) {
     .viewDetailConatiner1 {
         max-width: 90vw;

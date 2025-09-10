@@ -180,7 +180,7 @@ const handlePlaceOrder = async () => {
                                 cartData.map((obj,i) => {
                                     return (
                                         <tr key={i}>
-                                            <td className='checkoutImg'><img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`} />{obj.productName}</td>
+                                            <td className='checkoutImg'><img src={`${obj?.img}`} />{obj.productName}</td>
                                             <td>{obj.productQuantity}</td>
                                             <td>{obj.cartTotal}</td>
                                         </tr>

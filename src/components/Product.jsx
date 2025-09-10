@@ -276,7 +276,7 @@ setPageNo(1)
             return (
               <div className="product-card" key={i} onClick={sendData}>
                 <div className="product-image">
-                  <img src={`${import.meta.env.VITE_NODEJS_URL}/${product.img}`} alt={product.productName} />
+                  <img src={`${product.img}`} alt={product.productName} />
                 </div>
                 <h3 className="product-name">{product.productName}</h3>
                 <div className="starContainer" style={{ margin: "0px 10px 0px 20px", fontSize: "18px" }}>
@@ -311,7 +311,7 @@ setPageNo(1)
                   })}
                   <span style={{fontSize:"14px",color:"#94A3B8",marginLeft:"5px"}}>({product.userReviews.length})</span>
                 </div>
-                <p className="product-detail" style={{overflow:"hidden",maxHeight:"50px"}} >{product.description}</p>
+                <p className="product-detail" style={{overflow:"hidden",height:"55px"}} >{product.description}</p>
   
                 <div className='productsPrice'>
                   <span style={{fontSize:"19px",fontWeight:"700"}}>{`₹${product.price-product.discount}`}</span>

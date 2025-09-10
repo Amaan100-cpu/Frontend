@@ -52,11 +52,10 @@ const handleUpdateCancel=()=>{
   const sendFile = async (e) => {
   
   const { productName, description, category, subCategory, price, color, brand, discount } = productData;
-  
   const formData = new FormData();
   formData.append("img", file);
   formData.append("imgName", !file?.name?null:file?.name);
-  formData.append("imgPath",data?.img);
+  formData.append("imgPath",data?.cloudinaryId);
   formData.append("productName", productName);
   formData.append("description", description);
   formData.append("category", category);

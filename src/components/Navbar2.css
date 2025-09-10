@@ -75,7 +75,9 @@
     z-index: 3;
 }
 
-
-
-
+@media(max-width:595px){
+    .categoriesContainer{
+        justify-content: start;
+    }
+}
 

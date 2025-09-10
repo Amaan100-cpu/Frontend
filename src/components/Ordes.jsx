@@ -51,7 +51,7 @@ const [openView,setView]=useState(false)
           viewData.orderDetails.map((obj)=>{
             return(
               <div className='viewDetailConatiner5'>
-              <p><img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`}/></p>  
+              <p><img src={`${obj?.img}`}/></p>  
               <p>{obj.productName}</p>
               <p>Size : {obj.size}</p>
               <p>Quantity : {obj.productQuantity}</p>

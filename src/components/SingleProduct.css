@@ -59,6 +59,8 @@
 .emailDate {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .ProductDetails > h1 {
@@ -114,7 +116,13 @@ textarea::placeholder {
 }
 
 .comment{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+  background: #f6f8fa;
+}
+
+.comment>.commsg{
+  width: 100%;
+  word-break: break-all;
 }
 
 .comments{
@@ -122,7 +130,6 @@ textarea::placeholder {
   border-bottom: 1px solid #eee;
   width: 90vw;
   margin-bottom: 20px;
-  background: #f6f8fa;
   padding: 20px;
 }
 
@@ -144,6 +151,10 @@ textarea::placeholder {
   word-wrap: break-word;
 }
 
+.starContainer1{
+  font-size: 18px;
+}
+
 @media (max-width: 1000px) {
   .ProductContainer {
     flex-direction: column;
@@ -152,6 +163,9 @@ textarea::placeholder {
     width: 70vw;
     height: 200px;
   }
+  .starContainer1{
+  font-size: 25px;
+}
 
 }
 

@@ -12,7 +12,7 @@ const AdminProtectedRoute = ({Page}) => {
   const route=localStorage.getItem("route")
 
   return (
-    orderData[0]?._id?<Page/>:<Navigate to="/login"/>
+    user.email=="amaanahmad8616@gmail.com"?<Page/>:<Navigate to="/login"/>
   )
 }
 

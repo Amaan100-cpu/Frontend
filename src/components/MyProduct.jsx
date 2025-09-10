@@ -171,7 +171,7 @@ const handleUpdateProduct=(product)=>{
                   <td>{index + 1}</td>
                   <td>
                     <img
-                      src={`${import.meta.env.VITE_NODEJS_URL}/${p.img}`}
+                      src={`${p.img}`}
                       alt="product"
                       className="product-img"
                     />
@@ -189,7 +189,7 @@ const handleUpdateProduct=(product)=>{
                   <td style={{width:"110px"}}>{formatted}</td>
                   <td>
                     <i className="fas fa-edit action-btn edit-btn" onClick={()=>handleUpdateProduct(p)}><FontAwesomeIcon icon={faPen} /></i>
-                    <i className="fas fa-trash action-btn delete-btn"><FontAwesomeIcon icon={faTrash} onClick={()=>handleDeleteProduct(p._id,p.img)} /></i>
+                    <i className="fas fa-trash action-btn delete-btn"><FontAwesomeIcon icon={faTrash} onClick={()=>handleDeleteProduct(p._id,p.cloudinaryId)} /></i>
                   </td>
                 </tr>
               )})}

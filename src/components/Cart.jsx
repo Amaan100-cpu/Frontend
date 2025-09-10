@@ -59,7 +59,7 @@ if(cartData.length==0){
           <div className='singleCartContainer' key={i}>
             <div className='uuu'>
            <div className='cartImgContainer'>
-            <img src={`${import.meta.env.VITE_NODEJS_URL}/${obj?.img}`} />
+            <img src={`${obj?.img}`} />
            </div>
            <div className='singleCartData1'>
             <h3 style={{fontSize:"17px",}}>{obj.productName}</h3>

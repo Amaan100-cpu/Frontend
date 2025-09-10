@@ -100,7 +100,7 @@ catch(err){
       <div className="ProductContainer">
         <div className="ProductImgContainer">
         <div className="ProductImgContainer2">  
-        <img src={`${import.meta.env.VITE_NODEJS_URL}/${data?.img}`} />
+        <img src={`${data?.img}`} />
         </div>
         </div>
         <div className="ProductDetails">
@@ -156,7 +156,7 @@ catch(err){
           </div>
           <button className="singleProductBtn" onClick={handleCartData} style={{marginTop:"40px"}}>Add to Cart</button>
           <h1>Write a Review</h1>
-          <div className="starContainer" style={{marginBottom:"30px",fontSize:"18px"}}>
+          <div className="starContainer1" style={{marginBottom:"30px"}}>
             {Array.from({ length: 5 }, (_, i) => {
               return selectedStar.includes(i) ? (
                 <FontAwesomeIcon
@@ -188,14 +188,14 @@ catch(err){
         Array.from({length:data.userReviews.length},(_,i)=>{
           const date = new Date(data.userReviews[i].date);
           const day = date.getDate().toString().padStart(2, '0');
-          const month = date.toLocaleString('default', { month: 'long' });
+          const month = date.toLocaleString('default', { month: 'short' });
           const year = date.getFullYear();
           const formatted = `${day} ${month} ${year}`;
           return(
             <div className="comments" key={i}>
           <div className="comment">
             <div className="emailDate" style={{marginBottom:"8px"}}>
-              <p>{data.userReviews[i].email}</p>
+              <p style={{marginRight:"20px"}}>{data.userReviews[i].email}</p>
               <p>{formatted}</p>
             </div>
             <div className="starContainer">
@@ -222,7 +222,7 @@ catch(err){
                 })
               }
             </div>
-            <p>{data?.userReviews[i]?.reviewMsg?.toLowerCase()}</p>
+            <p className='commsg'>{data?.userReviews[i]?.reviewMsg?.toLowerCase()}</p>
           </div>
         </div>
           )

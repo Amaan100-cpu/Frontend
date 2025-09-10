@@ -21,7 +21,7 @@ const ProtectedRout = ({Page}) => {
     }
   },[location.pathname])
   if(user.success==undefined){
-    return <Navigate to="/login"/>
+    return <h1 style={{height:"70vh"}}>Loading...</h1>
   }
 
   return (

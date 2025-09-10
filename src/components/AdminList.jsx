@@ -49,7 +49,7 @@ const AdminList = () => {
                     <td>{idx + 1}</td>
                     <td>
                       <img
-                        src={`${import.meta.env.VITE_NODEJS_URL}/${product.img}`}
+                        src={`${product.img}`}
                         alt={product.productName}
                         className="admin-product-img"
                       />
