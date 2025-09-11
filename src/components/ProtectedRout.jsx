@@ -10,7 +10,7 @@ const ProtectedRout = ({Page}) => {
   const location=useLocation()
   const {user,setUser,red,setRed} =useContext(Mycontext)
   const route=localStorage.getItem("route")
- 
+
   useEffect(()=>{
     if(route && red){
       redirect(route)
@@ -20,9 +20,7 @@ const ProtectedRout = ({Page}) => {
       },100)
     }
   },[location.pathname])
-  if(user.success==undefined){
-    return <h1 style={{height:"70vh"}}>Loading...</h1>
-  }
+  
 
   return (
     user.success?<Page/>:<Navigate to="/login"/>

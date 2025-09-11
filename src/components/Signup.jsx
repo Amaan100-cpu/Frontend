@@ -7,7 +7,7 @@ import "../App.css"
 import githubImg from "../icons/github-img.png"
 import googleImg from "../icons/google-img.webp"
 import { githubProvider, googleProvider, auth } from "../Firebase.jsx"
-import { signInWithPopup } from 'firebase/auth'
+import { signInWithPopup,signOut } from 'firebase/auth'
 import Mycontext from '../Mycontext.jsx';
 const Signup = () => {
   const redirect = useNavigate()
@@ -48,16 +48,18 @@ const Signup = () => {
   const clickAuth = async (providerType) => {
     try {
       const provider = providerType === "github" ? githubProvider : googleProvider;
+      await signOut(auth);
+      provider.setCustomParameters({ prompt: "select_account" });
       const response = await signInWithPopup(auth, provider);
-      const { email, emailVerified } = response.user;
-
+      const { email, emailVerified,displayName } = response.user;
+      
       if (!emailVerified) {
         toastError(`${providerType} email is not verified`);
       } else {
         // console.log(email);
         const result = await fetch(`${import.meta.env.VITE_NODEJS_URL}/clickAuthRegister`, {
           method: "post",
-          body: JSON.stringify({ email, emailVerified, providerType }),
+          body: JSON.stringify({ email, emailVerified, providerType,name:displayName }),
           headers: { "content-type": "application/json" },
           credentials: "include"
         }).then((v) => v.json())
@@ -71,6 +73,7 @@ const Signup = () => {
         }
       }
     } catch (error) {
+      console.log(error.message)
       if (!toast.isActive("alreadyShow")) {
         toastError("OAuth login failed", { toastId: "alreadyShow" })
       }
@@ -87,10 +90,10 @@ const Signup = () => {
         <button>Signup</button>
         <p>Already have an account? <Link to="/login">Log in</Link></p>
         <div>
-          <p onClick={() => clickAuth("github")}><img src={githubImg} height="20px" /> Login with Github</p>
+          <p onClick={() => clickAuth("github")}><img src={githubImg} height="20px" /> Signup with Github</p>
         </div>
         <div>
-          <p onClick={() => clickAuth("google")}><img src={googleImg} height="30px" />Login with Google</p>
+          <p onClick={() => clickAuth("google")}><img src={googleImg} height="30px" />Signup with Google</p>
         </div>
       </form>
     </div>

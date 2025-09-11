@@ -10,7 +10,6 @@ const Logout = ({ setOpen }) => {
   const navigate = useNavigate();
 
   const logout = async () => {
-    console.log("999");
     try {
       await fetch(`${import.meta.env.VITE_NODEJS_URL}/logout`, {
         credentials: "include",
@@ -18,7 +17,9 @@ const Logout = ({ setOpen }) => {
       fetchUser();
       if (!toast.isActive("logout")) {
         toastSuccess("logout successfully", { toastId: "logout" });
-        window.location.replace("/");
+        setTimeout(() => {
+          window.location.replace("/");
+        }, 2000);
       }
     } catch {
       console.log("server error");

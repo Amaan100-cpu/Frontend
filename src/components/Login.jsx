@@ -8,7 +8,7 @@ import githubImg from "../icons/github-img.png"
 import googleImg from "../icons/google-img.webp"
 import Mycontext from '../Mycontext.jsx';
 import { githubProvider, googleProvider, auth } from "../Firebase.jsx"
-import { signInWithPopup } from 'firebase/auth'
+import { signInWithPopup,signOut } from 'firebase/auth'
 
 
 const Login = () => {
@@ -51,6 +51,8 @@ catch{
 const clickAuth = async (providerType) => {
     try {
       const provider = providerType === "github" ? githubProvider : googleProvider;
+      await signOut(auth);
+      provider.setCustomParameters({ prompt: "select_account" });
       const response = await signInWithPopup(auth, provider);
       const { email, emailVerified } = response.user;
 
