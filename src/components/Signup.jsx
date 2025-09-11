@@ -72,6 +72,7 @@ const Signup = () => {
       }
     } catch (error) {
       if (!toast.isActive("alreadyShow")) {
+        console.log(error.message)
         toastError("OAuth login failed", { toastId: "alreadyShow" })
       }
     }
