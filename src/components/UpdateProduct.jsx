@@ -128,7 +128,7 @@ const handleUpdateCancel=()=>{
         <label className='uploadLabel' htmlFor='abc'><FontAwesomeIcon style={{fontSize:"20px",marginRight:"7px"}} icon={faUpload} />Upload File</label>
         <h4 style={{margin:"0px 0px 5px 26px"}}>image</h4>
         <div className='uploadImgContainer2'>   
-        <img  src={file ? URL.createObjectURL(file) : `${import.meta.env.VITE_NODEJS_URL}/${data.img}`}/>
+        <img  src={file ? URL.createObjectURL(file) : `${data.img}`}/>
         <p>{file?.name?file?.name:data?.imgName}</p>
         </div>
         </div>
