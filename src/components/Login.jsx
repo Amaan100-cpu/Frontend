@@ -36,6 +36,7 @@ try{
     }
     else if(data.success) {
       setShowVerfication(true)
+      localStorage.setItem("email", data.email);
       redirect('/verification',{state:{toastMessage:data.message,email:data.email}})
     }
 }
