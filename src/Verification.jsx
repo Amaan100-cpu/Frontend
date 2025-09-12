@@ -83,7 +83,7 @@ useEffect(()=>{
       <form onSubmit={otpSend}>
         <h2>Verify OTP</h2>
         <p>OTP is sent to your Mobile Email Id</p>
-        <p>{location?.state?.email || "amaan@gmail.com"}</p>
+        <p>{localStorage.getItem("email") || "amaan@gmail.com"}</p>
 
         <OTPInput
           className="otpcolumn"
