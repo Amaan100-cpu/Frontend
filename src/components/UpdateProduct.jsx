@@ -25,7 +25,7 @@ const [isPopupOpen,setIsPopupOpen]=useState(false)
   boys: ['2-3Y', '3-4Y', '4-5Y', '5-6Y', '6-7Y', '7-8Y', '8-9Y', '9-10Y', '10-11Y', '11-12Y'],
   babies: ['Newborn', '0-3M', '3-6M', '6-9M', '9-12M', '12-18M', '18-24M']
 };
-  const [sizes, setSizes] = useState(...data.sizes || []);
+  const [sizes, setSizes] = useState([...data.sizes] || []);
   
   const handleUpdateProduct=(e)=>{
   e.preventDefault()
