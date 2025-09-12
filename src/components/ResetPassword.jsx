@@ -18,10 +18,10 @@ const ResetPassword = () => {
                 credentials:"include"
             })
             result=await result.json()
-            if(!result.success){
-                toastError(result.message)
-            }
-            else{
+            if (!result.success && !toast.isActive("alreadyShow")) {
+                  toastError(result.message,{toastId:"alreadyShow"})
+                }
+            else if(result.success){
                 setShowVerfication(true)
                 if(!toast.isActive("verification")){
                     toastSuccess(result.message,{toastId:"verification"})
