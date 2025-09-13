@@ -77,6 +77,7 @@ const handlePlaceOrder = async () => {
               const checkApiResult = await checkApi.json();
 
               if (!checkApiResult.success && !toast.isActive("alreadyShow")) {
+                  console.log(checkApiResult.err)
                 toastError(checkApiResult.message, { toastId: "alreadyShow" });
               } else if (checkApiResult.success) {
                 toastSuccess(checkApiResult.message);
