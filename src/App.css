@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   user-select: none; /* Standard */
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none; 
+}
+  
+body{
+background-color: #f8fafc;
+}
+
+.authUi{
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.authUi>form{
+  height: 420px;
+  width: 300px;
+  background-color:white;
+  border: 2px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10PX;                              
+}
+
+.authUi>form>input,.authUi>form>button{
+  width: 250px;
+  height: 33px;
+  border-radius: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.authUi>form>h2{
+  margin: 20px 0px 20px 0px;
+  font-size: 22px;
+}
+.authUi>form>div>p{
+  width: 250px;
+  height: 33px;
+  border-radius: 20px;
+  padding-left: 10px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13px;
+  cursor: pointer;
+  font-size: 13.5px;
+}
+.authUi>form>div>p>img{
+  margin-right: 10px;
+}
+
+.authUi>form>a{
+  margin:0px 0px 10px 150px;
+  font-size: 13px;
+}
+
+.authUi>form>p{
+  margin-right: 40px;
+  font-size: 13px;
+}
+
+.authUi>form>button{
+  margin-bottom: 15px;
+  color: rgba(46, 33, 102, 0.548);
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.authUi>.authLog{
+  height: 390px;  
+}
+
+.verification{
+  display: flex;
+  justify-content: center;
+  margin: 65px 0px;
+}
+
+.otpResBtn{
+  background:none;
+  border:none;
+  color: rgb(9, 9, 105);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.verification>form{
+  border: 2px solid;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.verification>form>h2{
+  padding-top:10px;
+  margin: 10px 0px 35px 0px;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.otpcolumn{
+  margin: 20px 0px 20px 20px;
+}
+
+.otpTime{
+  margin: 10px 0px;
+}
+
+.otpbtn>button{
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.lightReqBtn{
+  color: #888;
+}
+
