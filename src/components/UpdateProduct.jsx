@@ -105,6 +105,12 @@ const handleUpdateCancel=()=>{
   //   }
   // }, [location]);
 
+  if(loading){
+  return(
+    <BlackLoader/>
+  )
+}
+
   return (
   
     <div className='addProductContainer'>
