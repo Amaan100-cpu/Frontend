@@ -127,6 +127,11 @@ const handleUpdateProduct=(product)=>{
   localStorage.setItem("updateProductData",JSON.stringify(product))
   navigate("/updateProduct")
 }
+  if(loading){
+  return(
+    <BlackLoader/>
+  )
+}
 
   return (
     <div className="product-wrapper">
