@@ -87,7 +87,11 @@ const AddProduct = () => {
   //     redirect(location.pathname, {state:{}})
   //   }
   // }, [location]);
-
+if(loading){
+  return(
+    <BlackLoader/>
+  )
+}
   return (
     <div className='addProductContainer'>
       <form onSubmit={sendFile} encType="multipart/form-data">
