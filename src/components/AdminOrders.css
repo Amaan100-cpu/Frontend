@@ -1,0 +1,181 @@
+body {
+  background-color: #f9fbfc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.adminSidebar {
+  width: 220px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.adminSidebar h2 {
+  color: #2e7bcf;
+  margin-bottom: 30px;
+}
+
+.adminSidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.adminSidebar ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.adminSidebar ul li:hover {
+  color: #2e7bcf;
+}
+
+.adminSidebar .logout {
+  margin-top: 50px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dashboard main */
+.dashboard-main-content {
+  flex: 1;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.dashboard_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.dashboard_header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Order Card */
+.order-card {
+  display: flex;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  padding: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.order-icon {
+  font-size: 32px;
+  color: #3498db;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.order-details {
+  flex: 1;
+  min-width: 220px;
+}
+
+.order-details h4 {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.order-details p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+
+.order-details ul {
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.order-details li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Dropdown */
+.order-status {
+  min-width: 160px;
+  align-self: center;
+}
+
+.order-status select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.order-status select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .adminSidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .dashboard-main-content {
+    padding: 20px;
+  }
+
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-status {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .order-details h4 {
+    font-size: 15px;
+  }
+
+  .order-details p,
+  .order-details li {
+    font-size: 13px;
+  }
+
+  .order-icon {
+    font-size: 24px;
+  }
+
+  .order-status select {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,243 @@
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  position: relative;
+}
+
+.adminSidebar {
+  width: 220px;
+  background-color: #ffff;
+  padding: 20px;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  box-sizing: border-box;
+  position: sticky;
+  top: 75px;
+}
+
+.adminSidebar h2 {
+  color: #2e7bcf;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.adminSidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.adminSidebar ul li {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 130px;
+  margin: 10px 20px;
+}
+
+
+.adminSidebar ul li:hover {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color:#e2e8f0;
+}
+
+
+
+.dashboard-main-content {
+  flex: 1;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.dashboard_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dashboard_header h1,
+.dashboard-main-content h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  flex: 1 1 200px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-box:hover{
+  transform: translateY(-5px);
+  transition: transform 0.4s ease;
+}
+
+.stat-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ✅ New Order Card Styles */
+.order-card {
+  display: flex;
+  width: 75vw;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f9fafa;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  word-break: break-all;
+}
+
+.order-icon {
+  font-size: 28px;
+  color: #2e7bcf;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.order-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 220px;
+}
+
+.order-details h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.order-details p {
+  margin: 0;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.order-status {
+  min-width: 150px;
+}
+
+.order-status select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.order-card2{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.order-card3{
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.order-card1{
+  display: flex;
+  gap: 20px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+.adminSidebar>ul{
+  display: flex;
+  overflow: auto;
+}
+
+
+  .adminSidebar {
+    width: 100%;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+    height: auto;
+  }
+
+  .dashboard-main-content {
+    padding: 15px;
+  }
+
+  .dashboard_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+
+  .stat-box {
+    text-align: left;
+  }
+
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .order-details {
+    min-width: 100%;
+  }
+
+  .order-status {
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  .order-details p,
+  .order-details h4 {
+    font-size: 13px;
+  }
+
+  .order-icon {
+    font-size: 24px;
+  }
+}
+

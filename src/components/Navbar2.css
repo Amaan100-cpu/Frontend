@@ -1,0 +1,83 @@
+.navbar2Container{
+    height: 70px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchContainer>input{
+    width: 50vw;
+    height: 45px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    padding-left: 23px;
+    font-size: 15px;
+    outline: none;
+}
+
+.searchContainer>button{
+    font-size: 15px;
+    height: 45px;
+    width: 100px;
+    border: none;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px;
+    background-color: #d4af37;
+}
+
+
+.searchContainer>button:hover {
+  background-color: #b9962f; /* Darker gold */
+  cursor: pointer;
+}
+
+.categoriesContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    background-color: white;
+    height: 75px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 33px;
+    overflow-x: auto;
+}
+
+.categoriesContainer>h4{
+   padding: 0.5rem 1.2rem;
+   margin: 0 0.5rem;
+   border-radius: 20px; 
+   background-color: #f7fafc;
+   cursor: pointer;
+}
+
+.categoriesContainer>.navCategory{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+}
+
+.categoriesContainer>h4:hover{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+}
+
+.navbar2Container1{
+    position: sticky;
+    top: 75px;
+    z-index: 3;
+}
+
+@media(max-width:595px){
+    .categoriesContainer{
+        justify-content: start;
+    }
+}
+
