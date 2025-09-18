@@ -122,8 +122,15 @@ catch(err){
             
             {
               order.orderDetails.map((obj,i)=>{
+<<<<<<< HEAD
                 return<div className='order-card2' key={i}>
                   <p className='cartImgContainer order-card9'><img src={`${obj?.img}`} /></p>
+=======
+                console.log(obj.img)
+                console.log(obj.price)
+                return<div className='order-card2' key={i}>
+                  <p className='cartImgContainer'><img src={`${obj?.img}`} /></p>
+>>>>>>> 476f801eedab7a111e03f0c3d28fab25a74e9a24
                   <div>
                   <p><strong>{obj.productName}</strong></p>
                   <p style={{display:"flex",gap:"20px",flexWrap:"wrap"}}><span>Price : {obj.price}</span> <span>Quantity : {obj.productQuantity}</span> <span>Size : {obj.size}</span></p>

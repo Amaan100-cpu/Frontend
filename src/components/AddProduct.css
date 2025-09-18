@@ -106,8 +106,12 @@
   object-fit: cover;
   object-position: top;
   border-radius: 5px;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
+=======
+  border: 1px solid #ccc;
+>>>>>>> 476f801eedab7a111e03f0c3d28fab25a74e9a24
 }
 
 /* Sizes Section */
@@ -144,6 +148,7 @@
   color: var(--primary);
 }
 
+<<<<<<< HEAD
 .uploadImgContainer3 img{
   height: 120px;
   width: auto;
@@ -168,6 +173,8 @@
 }
 
 
+=======
+>>>>>>> 476f801eedab7a111e03f0c3d28fab25a74e9a24
 /* Media Queries */
 @media (max-width: 768px) {
   .addProductContainer {

@@ -58,11 +58,17 @@ if(cartData.length==0){
         return(
           <div className='singleCartContainer' key={i}>
             <div className='uuu'>
+<<<<<<< HEAD
            <div className='cartImgContainer1'>
             <div className='cartImgContainer'>
             <img src={`${obj?.img}`} />
            </div>
            </div>
+=======
+           <div className='cartImgContainer'>
+            <img src={`${obj?.img}`} />
+           </div>
+>>>>>>> 476f801eedab7a111e03f0c3d28fab25a74e9a24
            <div className='singleCartData1'>
             <h3 style={{fontSize:"17px",}}>{obj.productName}</h3>
             <h3 style={{ fontSize: "14px", color: "#888", fontWeight: "200"}} className='cartProductDetail'>{obj.description}</h3>
