@@ -6,7 +6,7 @@ import Mycontext from '../Mycontext.jsx'
 import { toast } from 'react-toastify'
 const ResetPassword = () => {
     const {setShowVerfication}=useContext(Mycontext)
-    const [data,setData]=useState({email:"",password:"",rePassword:""})
+    const [data,setData]=useState({email:"",currentPass:"",password:"",rePassword:""})
     const navigate=useNavigate()
     const handlesendData=async (e)=>{
         e.preventDefault()
@@ -40,9 +40,10 @@ const ResetPassword = () => {
     <div className='resetContainer1'>
         <div className='resetContainer2'>
         <h3>Reset Password</h3>    
-        <input placeholder='Enter Email' onChange={(e)=>setData({...data,email:e.target.value})}/>
-        <input placeholder='Enter Password' onChange={(e)=>setData({...data,password:e.target.value})}/>
-        <input placeholder='Enter Re Password' onChange={(e)=>setData({...data,rePassword:e.target.value})}/>
+        <input placeholder='Email Address' onChange={(e)=>setData({...data,email:e.target.value})}/>
+        <input placeholder='Current Password' onChange={(e)=>setData({...data,currentPass:e.target.value})}/>
+        <input placeholder='New Password' onChange={(e)=>setData({...data,password:e.target.value})}/>
+        <input placeholder='Confirm New Password' onChange={(e)=>setData({...data,rePassword:e.target.value})}/>
         <button onClick={handlesendData}>Submit</button>
         </div>
     </div>
