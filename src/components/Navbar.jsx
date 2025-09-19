@@ -61,7 +61,7 @@ const Navbar = () => {
               <h4>{user?.data?.name}</h4>
               <h4>{user?.data?.email}</h4>
               {
-              Array.isArray(allUsers) && allUsers.length == 0 && <NavLink onClick={()=>{setOpen(false);setAuthOpen(false)}} to={"/resetPassword"}><h4 className={"/about"==location.pathname?"actives":""}>Reset Password</h4></NavLink>
+              user.success && <NavLink onClick={()=>{setOpen(false);setAuthOpen(false)}} to={"/resetPassword"}><h4 className={"/about"==location.pathname?"actives":""}>Reset Password</h4></NavLink>
               }
               {
               Array.isArray(allUsers) && allUsers.length > 0 &&<NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/dashboard"}><h4 className={"/cart"==location.pathname?"actives":""}>Dashboard</h4></NavLink>
