@@ -137,7 +137,7 @@ const handleUpdateCancel=()=>{
         <div className='uploadImgContainer1'>
         <label className='uploadLabel' htmlFor='abc'><FontAwesomeIcon style={{fontSize:"20px",marginRight:"7px"}} icon={faUpload} />Upload File</label>
         
-        <div className={file?.name?"uploadImgContainer3":"uploadImgContainer2"}>
+        <div className="uploadImgContainer3">
         <h4>image</h4>
         <div className='uploadImgContainer4'>   
         <img  src={file ? URL.createObjectURL(file) : `${data.img}`}/>
