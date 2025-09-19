@@ -136,7 +136,6 @@ const handleUpdateCancel=()=>{
         <input type="file" name='img' onChange={(e) => setFile(e.target.files[0])} id="abc" style={{display:"none"}} />
         <div className='uploadImgContainer1'>
         <label className='uploadLabel' htmlFor='abc'><FontAwesomeIcon style={{fontSize:"20px",marginRight:"7px"}} icon={faUpload} />Upload File</label>
-<<<<<<< HEAD
         
         <div className={file?.name?"uploadImgContainer3":"uploadImgContainer2"}>
         <h4>image</h4>
@@ -146,14 +145,6 @@ const handleUpdateCancel=()=>{
         </div>
         </div>
         <p>{file?.name?file?.name:data?.imgName}</p>
-=======
-        <h4 style={{margin:"0px 0px 5px 26px"}}>image</h4>
-        <div className='uploadImgContainer2'>   
-        <img  src={file ? URL.createObjectURL(file) : `${data.img}`}/>
-        <p>{file?.name?file?.name:data?.imgName}</p>
-        </div>
-        </div>
->>>>>>> 476f801eedab7a111e03f0c3d28fab25a74e9a24
         <div className='AllSizesContainer'>
         <div className='sizeContainer'>
           Men and Women : 
