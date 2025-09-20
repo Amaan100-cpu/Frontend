@@ -11,8 +11,8 @@ const HeroSection = () => {
   return (
     <div className="hero-banner">
       <div className="hero-content">
-        <h1>Premium Fashion & Electronics</h1>
-        <p>Discover the latest trends in fashion and cutting-edge electronics at unbeatable prices.</p>
+        <h1>Premium Fashion & Apparel</h1>
+        <p>Discover the latest trends in fashion and stylish apparel at unbeatable prices.</p>
         <h3 className="hero-btn" onClick={aaa}>Shop Now</h3>
       </div>
       <img 
