@@ -78,6 +78,7 @@ const clickAuth = async (providerType) => {
       }
     } catch (error) {
       if(!toast.isActive("alreadyShow")){
+        console.log(error)
       toastError("OAuth login failed",{toastId:"alreadyShow"})
   }
     }
