@@ -17,10 +17,12 @@ const Login = () => {
   const location=useLocation()
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const signupPost = async (e) => {
 try{
       e.preventDefault()
+      setLoading(true)
     const data = await fetch(`${import.meta.env.VITE_NODEJS_URL}/login/post`, {
       method: "post",
       body: JSON.stringify({ email, password}),
@@ -31,16 +33,19 @@ try{
     })
 
     if (!data.success && !toast.isActive("alreadyShow")) {
+      setLoading(false)
       toastError(data.message,{toastId:"alreadyShow"})
       console.log(data.message)
     }
     else if(data.success) {
+      setLoading(false)
       setShowVerfication(true)
       localStorage.setItem("email", data.email);
       redirect('/verification',{state:{toastMessage:data.message,email:data.email}})
     }
 }
 catch{
+  setLoading(false)
   if(!toast.isActive("alreadyShow")){
     toastError("server error",{toastId:"alreadyShow"})
   }
@@ -91,7 +96,7 @@ const clickAuth = async (providerType) => {
         <input placeholder='Enter Email' name='email' onChange={(e) => { setEmail(e.target.value) }} />
         <input placeholder='Enter Password' name='password' onChange={(e) => { setPassword(e.target.value) }} />
         <Link to="/resetPassword">Forgot Password?</Link>
-        <button className='loginBtn'>Login</button>
+        <button className='loginBtn' disabled={loading==true}>Login</button>
         <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
 
         <div>
