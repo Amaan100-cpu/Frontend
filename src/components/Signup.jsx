@@ -15,10 +15,12 @@ const Signup = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const { red, setRed, fetchUser,setShowVerfication } = useContext(Mycontext)
+  const [loading, setLoading] = useState(false)
 
   const signupPost = async (e) => {
     try {
       e.preventDefault()
+      setLoading(true)
       const data = await fetch(`${import.meta.env.VITE_NODEJS_URL}/register/post`, {
         method: "post",
         body: JSON.stringify({ name, email, password }),
@@ -29,16 +31,19 @@ const Signup = () => {
       })
 
       if (!data.success && !toast.isActive("alreadyShow")) {
+        setLoading(false)
         toastError(data.message, { toastId: "alreadyShow" })
         console.log(data.message)
       }
       else if (data.success) {
+        setLoading(false)
         setShowVerfication(true)
         localStorage.setItem("email", data.email);
         redirect('/verification', { state: { toastMessage: data.message,email:data.email } })
       }
     }
     catch {
+      setLoading(false)
       if (!toast.isActive("alreadyShow")) {
         toastError("server error", { toastId: "alreadyShow" })
       }
@@ -89,7 +94,7 @@ const Signup = () => {
         <input placeholder='Name' name='name' onChange={(e) => { setName(e.target.value) }} />
         <input placeholder='Email' name='email' onChange={(e) => { setEmail(e.target.value) }} />
         <input placeholder='Password' name='password' onChange={(e) => { setPassword(e.target.value) }} />
-        <button>Signup</button>
+        <button disabled={loading==true}>Signup</button>
         <p>Already have an account? <Link to="/login">Log in</Link></p>
         <div>
           <p onClick={() => clickAuth("github")}><img src={githubImg} height="20px" /> Signup with Github</p>
