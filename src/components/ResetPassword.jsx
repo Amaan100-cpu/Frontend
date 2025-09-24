@@ -7,9 +7,11 @@ import { toast } from 'react-toastify'
 const ResetPassword = () => {
     const {setShowVerfication}=useContext(Mycontext)
     const [data,setData]=useState({email:"",currentPass:"",password:"",rePassword:""})
+    const [loading, setLoading] = useState(false)
     const navigate=useNavigate()
     const handlesendData=async (e)=>{
         e.preventDefault()
+        setLoading(true)
         try{
             let result=await fetch(`${import.meta.env.VITE_NODEJS_URL}/resetPassword`,{
                 method:"post",
@@ -19,9 +21,11 @@ const ResetPassword = () => {
             })
             result=await result.json()
             if (!result.success && !toast.isActive("alreadyShow")) {
+                  setLoading(false)
                   toastError(result.message,{toastId:"alreadyShow"})
                 }
             else if(result.success){
+                setLoading(false)
                 setShowVerfication(true)
                 if(!toast.isActive("verification")){
                     toastSuccess(result.message,{toastId:"verification"})
@@ -31,6 +35,7 @@ const ResetPassword = () => {
 
         }
         catch(err){
+            setLoading(false)
             console.log(err.message)
             toastError("server error")
         }
