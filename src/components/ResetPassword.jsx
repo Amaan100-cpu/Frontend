@@ -52,7 +52,7 @@ const ResetPassword = () => {
         <input placeholder='Current Password' onChange={(e)=>setData({...data,currentPass:e.target.value})}/>
         <input placeholder='New Password' onChange={(e)=>setData({...data,password:e.target.value})}/>
         <input placeholder='Confirm New Password' onChange={(e)=>setData({...data,rePassword:e.target.value})}/>
-        <button onClick={handlesendData}>Submit</button>
+        <button onClick={handlesendData} disabled={loading==true}>Submit</button>
         </div>
     </div>
   )
