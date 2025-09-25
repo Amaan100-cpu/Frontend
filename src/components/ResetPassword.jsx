@@ -39,6 +39,9 @@ const ResetPassword = () => {
             console.log(err.message)
             toastError("server error")
         }
+        finally{
+   setLoading(false)
+              }   
     } 
 
   return (
