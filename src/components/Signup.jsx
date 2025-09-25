@@ -48,6 +48,9 @@ const Signup = () => {
         toastError("server error", { toastId: "alreadyShow" })
       }
     }
+    finally{
+   setLoading(false)
+          }   
 
   }
 
