@@ -51,6 +51,9 @@ catch{
   }
   
 }
+ finally{
+   setLoading(false)
+ }   
 
   }
 
