@@ -74,6 +74,7 @@ const Signup = () => {
         }).then((v) => v.json())
 
         if (!result.success && !toast.isActive("alreadyShow")) {
+          console.log(result.err)
           toastError(result.message, { toastId: "alreadyShow" })
         }
         else if (result.success) {
