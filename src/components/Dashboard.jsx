@@ -99,11 +99,11 @@ catch(err){
         </div>
 
         <div className="stats">
-          <div className="stat-box"><h3>Total Users</h3><p>{allUsers.length}</p></div>
-          <div className="stat-box"><h3>Total Orders</h3><p>{orderData.length}</p></div>
-          <div className="stat-box"><h3>Pending Orders</h3><p>{pendingOrders.length}</p></div>
-          <div className="stat-box"><h3>Cancelled Orders</h3><p>{cancelOrders.length}</p></div>
-          <div className="stat-box"><h3>Successfull Orders</h3><p>{successfullOrders.length}</p></div>
+          <div className="stat-box"><h3>Total Users</h3><p>{allUsers?.length||0}</p></div>
+          <div className="stat-box"><h3>Total Orders</h3><p>{orderData?.length||0}</p></div>
+          <div className="stat-box"><h3>Pending Orders</h3><p>{pendingOrders?.length||0}</p></div>
+          <div className="stat-box"><h3>Cancelled Orders</h3><p>{cancelOrders?.length||0}</p></div>
+          <div className="stat-box"><h3>Successfull Orders</h3><p>{successfullOrders?.length||0}</p></div>
           <div className="stat-box"><h3>Revenue</h3><p>₹{revenue}</p></div>
         </div>
 
