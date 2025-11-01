@@ -52,7 +52,7 @@ const Navbar = () => {
               <NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/myProduct")}} to={"/myProduct"}><h4 className={"/myProduct"==location.pathname?"actives":""}>My products</h4></NavLink>
               <NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/orders")}} to="/orders"><h4 className={"/orders"==location.pathname?"actives":""}>Orders</h4></NavLink>
               <NavLink onClick={()=>{setOpen(false);setAuthOpen(false)}} to={"/about"}><h4 className={"/about"==location.pathname?"actives":""}>Aboutus</h4></NavLink>
-              <NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/cart"}><h4 className={"/cart"==location.pathname?"actives":""}><FontAwesomeIcon icon={faShoppingCart} style={{fontSize:"20px",marginRight:"6px"}}/>Cart{cartData.length>0&&<span className="cartQuantity">{cartData.length}</span>}</h4></NavLink>
+              <NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/cart"}><h4 className={"/cart"==location.pathname?"actives":""}><FontAwesomeIcon icon={faShoppingCart} style={{fontSize:"20px",marginRight:"6px"}}/>Cart{<span className="cartQuantity">{cartData?.length||0}</span>}</h4></NavLink>
               {user.success?
               <div className="aaa1">
               <h3 onClick={()=>{setAuthOpen(!authOpen)}} className="profileContainer"><FontAwesomeIcon icon={faUser}/></h3>
@@ -64,7 +64,7 @@ const Navbar = () => {
               user.success && <NavLink onClick={()=>{setOpen(false);setAuthOpen(false)}} to={"/resetPassword"}><h4 className={"/about"==location.pathname?"actives":""}>Reset Password</h4></NavLink>
               }
               {
-              Array.isArray(allUsers) && allUsers.length > 0 &&<NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/dashboard"}><h4 className={"/cart"==location.pathname?"actives":""}>Dashboard</h4></NavLink>
+              Array.isArray(allUsers) && allUsers?.length > 0 &&<NavLink onClick={()=>{setOpen(false);setAuthOpen(false);notLoginMsg("/cart")}} to={"/dashboard"}><h4 className={"/cart"==location.pathname?"actives":""}>Dashboard</h4></NavLink>
               }
               <Logout value={setOpen}/>
               </div>
